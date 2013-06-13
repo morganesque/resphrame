@@ -9,7 +9,7 @@ Yet another little floating iframe responsive web design testing thing.
 
 ### Background ###
 
-So yeah... Brad Frost (with help no doubt) has collected a wonderful [list of responsive testing tools](http://bradfrost.github.io/this-is-responsive/resources.html#testing) which I've searched through and which mostly I'm really impressed with. But I could never remember which were the ones I liked the best so I ended up writing a kind of précis of all of them (see other_tools.txt in this repo) so I could quickly find the one I remembered using last. 
+So yeah... Brad Frost (with help no doubt) has collected a wonderful [list of responsive testing tools](http://bradfrost.github.io/this-is-responsive/resources.html#testing) which I've searched through and which mostly I'm really impressed with. But I could never remember which were the ones I liked the best so I ended up writing a kind of précis of all of them (see [other_tools.txt](http://morganesque.github.io/resphrame/other_tools.txt) in this repo) so I could quickly find the one I remembered using last. 
 
 As I was doing that I realised that there were some feature patterns which emerged (some which I liked and some which were clearly aimed at different use-cases). Also none of them had that combination of all the features I wanted...
 
