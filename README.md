@@ -29,6 +29,10 @@ Here's a few things about it.
 
 * **Device presets** &mdash; Instead of having buttons for preset device sizes I've just included little _markers_ in the background which the draggable handle will snap to. You can change the placement of these in the comma-delimited list (on the left).
 
+* **Randomiser** &mdash; Also if you remove the `#320` number from the URL but leave a web address it'll automatically give you a random width.
+
+* **Refresh** &mdash; I saved the best till last. Many times when I'm working with these things (especially the bookmarklet ones) I edit some code and Alt+Tab back to my browser and without thinking hit CMD+r to refresh. For tools which are bookmarklets this totally trashes the testing, for tools which don't cache the state in the URL you're back to some default viewport size you aren't testing right now. So for this I've grabbed the keypresses CMD+r, CTRL+r and F5 and funneled them into the iframe so only that refreshes (only it doesn't quite work so a quick double press should have the whole thing refresh for you).
+
 ### Caveats ###
 
 In case you haven't picked it up this is very much directed at me and how I work. It won't suit everyone. Also I can totally see the need for having device sized viewports for showing your boss what the website will actually look at on different popular devices. That's not what I'm trying to provide for.
