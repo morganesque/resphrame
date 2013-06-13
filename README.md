@@ -15,13 +15,22 @@ As I was doing that I realised that there were some feature patterns which emerg
 
 Here's a few things about it.
 
-* I've tried to keep chrome to a minimum. Mostly you don't want to look at it and especially as I'm on a laptop all vertical space is valuable.
+* **Width only** &mdash; I'm not saying height isn't important or shouldn't be considered, but from experience when I'm creating a site I want to control the width but see as much height as possible. Boom.
 
-* The main interaction therefore is via a draggable handle which you can use to make the viewport smaller and larger. This is because mainly that's what I tend to do during work. I don't want to see static iframes showing me different devices, it's about watching the design as it grows and shrinks and seeing where the problems arise.
+* **Minimum chrome** &mdash; For the most part I don't want to look at a string of buttons or options and especially as I'm most on a laptop all space is at a premium.
 
-* Secondly when those problems come I want to know exactly what size viewport I'm at. That's why the width is in the handle itself. At that point that’s all I want to know.
+* **Draggable** &mdash; The main interaction therefore is via a draggable handle which you can use to make the viewport smaller and larger. This is because mainly that's what I tend to do during work. I don't want to see static iframes showing me different devices, it's about watching the design as it grows and shrinks and seeing where the problems arise.
 
-* Both the website I'm looking at and the current width are stored in the URL (via history.pushstate) and so at any point I should be able to just grab that URL, wang it in Skype and show someone else what I'm seeing. This also means that setting an exact numeric width is just a matter of hacking the URL.
+* **Viewport size** &mdash; Also when those problems appear I want to know exactly what size viewport I'm at. That's why the width is in the handle itself. At that point that’s all I want to know before I Alt+Tab back to my CSS and add a media query.
 
-* Instead of having buttons for preset device sizes I've just included little markers in the background which the draggable handle will snap to. You can change the placement of these in the comma-delimited list (on the left).
+* **Sharable** &mdash; Both a) the **website** I'm testing, and b) the **current width** are stored in the URL (via `history.pushstate`) and so at any point I should be able to just grab that URL, wang it in Skype and show someone else what I'm seeing.
 
+* **Typed widths** &mdash; This also means that setting an exact numeric width is just a matter of hacking the URL (less chrome!).
+
+* **Device presets** &mdash; Instead of having buttons for preset device sizes I've just included little _markers_ in the background which the draggable handle will snap to. You can change the placement of these in the comma-delimited list (on the left).
+
+### Caveats ###
+
+In case you haven't picked it up this is very much directed at me and how I work. It won't suit everyone. Also I can totally see the need for having device sized viewports for showing your boss what the website will actually look at on different popular devices. That's not what I'm trying to provide for.
+
+p.s. I've just built this very quickly today so it's working in Chrome 26. If it looks like anyone else is interested I'll do some more testing (or you can!) and get it working more widely.
