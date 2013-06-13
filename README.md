@@ -38,3 +38,7 @@ Here's a few things about it.
 In case you haven't picked it up this is very much directed at me and how I work. It won't suit everyone. Also I can totally see the need for having device sized viewports for showing your boss what the website will actually look at on different popular devices. That's not what I'm trying to provide for.
 
 p.s. I've just built this very quickly today so it's working in Chrome 26. If it looks like anyone else is interested I'll do some more testing (or you can!) and get it working more widely.
+
+### To Do ###
+
+* Make it measure in ems. I tend to use ems in media queries but I'm a little warey of just doing `width/16` so I need to look into it I think.
