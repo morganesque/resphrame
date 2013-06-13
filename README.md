@@ -21,7 +21,7 @@ Here's a few things about it.
 
 * **Draggable** &mdash; The main interaction therefore is via a draggable handle which you can use to make the viewport smaller and larger. This is because mainly that's what I tend to do during work. I don't want to see static iframes showing me different devices, it's about watching the design as it grows and shrinks and seeing where the problems arise.
 
-* **Viewport size** &mdash; Also when those problems appear I want to know exactly what size viewport I'm at. That's why the width is in the handle itself. At that point that’s all I want to know before I Alt+Tab back to my CSS and add a media query.
+* **Viewport size** &mdash; Also when those problems appear I want to know exactly what size viewport I'm at. That's why the width is in the handle itself. At that point that’s all I want to know before I switch back to my CSS and add a media query.
 
 * **Sharable** &mdash; Both a) the **website** I'm testing, and b) the **current width** are stored in the URL (via `history.pushstate`) and so at any point I should be able to just grab that URL, wang it in Skype and show someone else what I'm seeing.
 
@@ -31,7 +31,7 @@ Here's a few things about it.
 
 * **Randomiser** &mdash; Also if you remove the `#320` number from the URL but leave a web address it'll automatically give you a random width.
 
-* **Refresh** &mdash; I saved the best till last. Many times when I'm working with these things (especially the bookmarklet ones) I edit some code and Alt+Tab back to my browser and without thinking hit CMD+r to refresh. For tools which are bookmarklets this totally trashes the testing, for tools which don't cache the state in the URL you're back to some default viewport size you aren't testing right now. So for this I've grabbed the keypresses CMD+r, CTRL+r and F5 and funneled them into the iframe so only that refreshes (only it doesn't quite work so a quick double press should have the whole thing refresh for you).
+* **Refresh** &mdash; Many times when I'm working with these things (especially the bookmarklet ones) I edit some code and switch back to my browser and without thinking hit `CMD+r` to refresh. For tools which are bookmarklets this totally trashes the testing, for tools which don't cache the state in the URL you're back to some default viewport size you aren't testing right now. So for this I've grabbed the keystrokes `CMD+r`, `CTRL+r` and `F5` and funneled them into the iframe so only that refreshes _(Nb. it doesn't quite work perfectly so a quick double press should have the whole thing refresh for you - which is enough to catch the instinctive, muscle-memory stuff but doesn't exactly lock you out of your compter!)_.
 
 ### Caveats ###
 
