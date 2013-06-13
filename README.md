@@ -3,6 +3,8 @@ resphrame
 
 Yet another little floating iframe responsive web design testing thing.
 
+[Take a spin](http://morganesque.github.io/resphrame/)
+
 <small><small>* the name's awful I know, it kind of made me laugh how awful it was when I thought of it ... so I kept it ;-)</small></small>
 
 ### Background ###
