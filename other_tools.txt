@@ -1,54 +1,34 @@
 Responsinator
 http://www.responsinator.com/
 Multiple devices all on screen at once in a single long column page. Faded device images frame the iframes.
-– too device spefic 
-- no fluid resizing
 
 Responsivator
 http://dfcb.github.io/Responsivator/
-Multiple devices all on screen at once in a single horzontal page. No device images just plain iframes.
-+ Nice customisation options
-+ View random
-+ saves website in URL.
-– too device spefic 
-- no fluid resizing
+Multiple devices all on screen at once in a single horzontal page. Plain iframes. Nice customisation options. View random. Saves website in URL.
 
 Responsive.is (by Typecast)
 http://responsive.is/typecast.com
-Single central iframe. 5 device size options.
-+ saves website in URL.
-- no fluid resize or custom sizes.
+Single central iframe. 5 device size options. Saves website in URL.
 
 Responsive Web Design Testing Tool
 http://mattkersley.com/responsive/
-Multiple devices all on screen at once in a single horzontal page. No device images just plain iframes.
-+ Either fit to screen height or show actual device sizes.
-– too device spefic 
+Multiple devices all on screen at once in a single horzontal page. No device images just plain iframes. Either fit to screen height or show actual device sizes.
 
 Responsivepx
 http://responsivepx.com/
-Single central iframe. Resizable via width and height sliders.
-+ toggle scrollbars
-+ fluid resizing (and typed numeric)
-+ uses URL to save state
+Single central iframe. Resizable via width and height sliders. Toggle scrollbars. Fluid resizing (and typed numeric). Saves website in URL.
 
 Screenqueri.es
 http://screenqueri.es/
-Single left-align iframe. Resizable (horizontally & vertically). Lots of preset devices.
-+ Saves current state as sharable URL (but long winded though).
-- ads & theme sales
+Single left-align iframe. Resizable (horizontally & vertically). Lots of preset devices. Saves website as URL (but not explicitly). It has ads & is trying to sell me a theme.
 
 Aptus
 https://itunes.apple.com/gb/app/aptus/id510487565?mt=12
-Dedicated browser that lets you preview, edit and screenshot.
-- it's an app 
-- only sharable via screenshots
+App: Dedicated browser that lets you preview, edit and screenshot.
 
 Responsive Design Bookmarklet
 http://responsive.victorcoulon.fr/
-Single central iframe. 4 device options. 
-+ It's a bookmarklet though (no sharing).
-+ optional keyboard overlay
+Bookmarklet: Single central iframe. 4 device options. Optional keyboard overlay.
 
 Izilla Media Query Debugger
 https://github.com/izilla/Izilla-Media-Query-Debugger
