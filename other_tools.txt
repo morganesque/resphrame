@@ -1,0 +1,119 @@
+Responsinator
+http://www.responsinator.com/
+Multiple devices all on screen at once in a single long column page. Faded device images frame the iframes.
+– too device spefic 
+- no fluid resizing
+
+Responsivator
+http://dfcb.github.io/Responsivator/
+Multiple devices all on screen at once in a single horzontal page. No device images just plain iframes.
++ Nice customisation options
++ View random
++ saves website in URL.
+– too device spefic 
+- no fluid resizing
+
+Responsive.is (by Typecast)
+http://responsive.is/typecast.com
+Single central iframe. 5 device size options.
++ saves website in URL.
+- no fluid resize or custom sizes.
+
+Responsive Web Design Testing Tool
+http://mattkersley.com/responsive/
+Multiple devices all on screen at once in a single horzontal page. No device images just plain iframes.
++ Either fit to screen height or show actual device sizes.
+– too device spefic 
+
+Responsivepx
+http://responsivepx.com/
+Single central iframe. Resizable via width and height sliders.
++ toggle scrollbars
++ fluid resizing (and typed numeric)
++ uses URL to save state
+
+Screenqueri.es
+http://screenqueri.es/
+Single left-align iframe. Resizable (horizontally & vertically). Lots of preset devices.
++ Saves current state as sharable URL (but long winded though).
+- ads & theme sales
+
+Aptus
+https://itunes.apple.com/gb/app/aptus/id510487565?mt=12
+Dedicated browser that lets you preview, edit and screenshot.
+- it's an app 
+- only sharable via screenshots
+
+Responsive Design Bookmarklet
+http://responsive.victorcoulon.fr/
+Single central iframe. 4 device options. 
++ It's a bookmarklet though (no sharing).
++ optional keyboard overlay
+
+Izilla Media Query Debugger
+https://github.com/izilla/Izilla-Media-Query-Debugger
+Adds the viewport width and height as a :before pseudo element on the body to help with obtaining values for responsive breakpoints.
+
+Bricss
+http://www.benjaminkeen.com/open-source-projects/smaller-projects/responsive-design-bookmarklet/
+Multiple devices all on screen at once in a single horzontal page. No device images just plain iframes.
+
+Screenfly
+https://quirktools.com/screenfly/
+Single left-align iframe. Resizable (horizontally & vertically via typed nuermical). Lots of preset devices. Rotate. Share.
+
+Responsive Roulette
+http://www.jordanm.co.uk/lab/responsiveroulette
+Single central iframe. Resizable randomly by clicking a button.
+
+Fontier for Chrome
+https://chrome.google.com/webstore/detail/fontier/dkbamaalakfhckcidgiigdinhcncaeae
+Chrome extension: A way to change the default font size in Chrome. For testing Responsive websites using em and percentage units. 
+
+Resolution Test
+https://chrome.google.com/webstore/detail/resolution-test/idhfcdbheobinplaamokffboaccidbal
+Chrome extension: An extension for developers to test web pages in different screen resolutions, with an option to define your own resolutions.
+
+Firefox Developer Tools (shortcut CTRL + SHIFT + M)
+https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View
+Firefox dev tool: Single iframe (a-like) fluid resizing. Device preset dropdown. Rotate.
+
+Viewport Resizer 
+http://lab.maltewassermann.com/viewport-resizer/
+Bookmark: Single central iframe. Fluid drag resize. Lots of device presets. Custom sizes (typed numerical). 
+
+jResize
+http://toddmotto.com/labs/responsive/
+Single central iframe. Width presets. Custom widths.
+
+Resize My Browser
+http://resizemybrowser.com/
+Creates popups of a certain size when you click links.
+
+Juicer
+http://juicecreative.co.uk/juicer/
+Single iframe housed in photo-realistic images of devices. iPhone, Android, iPad only.
+
+RWD
+https://chrome.google.com/webstore/detail/rwddy/gkhnhkakdgogajfjmenpdeakhofjadhe
+Chrome extension: Pops a little div at the top of any page that shows what the site looks like at 320, 640, 980 and 1280px wide.
+
+ish.
+http://bradfrostweb.com/demo/ish/
+Single central iframe. 5 width presets (only they aren't exact!!!!). Custom exact sizes (via typed numerical). Website cached in URL for sharing.
+
+Responsive Tools
+http://responsivetools.com/
+Multiple devices all on screen at once in a single long column page. Faded device images around the iframes. Device "jump to" link on left.
+
+Am I Responsive
+http://ami.responsivedesign.is/
+Shows website at different sizes in an eminently screengrabbable way!
+
+I Am Mobile
+http://www.iammobile.co.uk/
+Gives you a score out of 8 (?) for whether you're mobile or not. It's actually a really good check of a number of little mobile-friendly things you can do (as well as showing you your site in mutiple devices)
+
+Responsive Inspector
+http://outof.me/responsive-inspector/
+Chrome extension. Digs into the code a bit more. Resizes your entire browser though (boo!)
