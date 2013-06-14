@@ -25,7 +25,7 @@ Here's a few things about it.
 
 * **Viewport size** &mdash; Also when those problems appear I want to know exactly what size viewport I'm at. That's why the width is in the handle itself. At that point that’s all I want to know before I switch back to my CSS and add a media query.
 
-* **Sharable** &mdash; Both a) the **website** I'm testing, and b) the **current width** are stored in the URL (via `history.pushstate`) and so at any point I should be able to just grab that URL, wang it in Skype and show someone else what I'm seeing.
+* **Sharable** &mdash; Both a) the **website** I'm testing, and b) the **current width** are stored in the URL and so at any point I should be able to just grab that URL, wang it in Skype and show someone else what I'm seeing.
 
 * **Typed widths** &mdash; This also means that setting an exact numeric width is just a matter of hacking the URL (less chrome!).
 

@@ -7,6 +7,7 @@
 <head id="httpflies-head">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>RESPHRAME - The Responsive iFrame</title>
+    <meta charset="utf-8">
     <meta name="title" content="RESPHRAME - The Responsive iFrame">
     <meta name="author" content="Tom Morgan - Morganesque - http://morganesque.com/">
     <meta name="Copyright" content="Copyright Tom Morgan 2013. All Rights Reserved.">
@@ -120,64 +121,80 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function()
-        {       
-            var snaps = [320,480,768,1024,1280];
-            var lowerLimit = 240;
+        {               
+            var snaps = [320,480,768,1024,1280];            // array for snap/marks in background.
+            var lowerLimit = 240;                           // smallest width of viewport.  
+            var currentURL = 'http://morganesque.com/';     // default starting URL (well wouldn't you?)
+            if (document.location.search.substr(5) !== '')
+                currentURL = document.location.search.substr(5);     // checking we don't already have a new URL.
+            var currentWidth = 240 + Math.floor(Math.random()*784); // default starting width (random).
 
+            // grab the .wrapper container div and add in the handle.
+            var container = $('.wrapper').css({position:'relative'});
+            container.prepend('<a href="#" class="handle"></a>');
+            var cover = $('.cover');                        // grab the cover (for preventing stray mouse events)
+            var winw = $(window).width();                   // width of the full window.
+            var z_idx, drg_h, drg_w, pos_y, pos_x;          // a few vars for helping drag
+            var handle = $('.handle');                      // the handle (added above).
+
+            /*
+                Watching for keystrokes (so we can hijack refreshes)
+            */
             var keysDown = [];
             $(window).on('keydown',function(e)
             {
                 // if it's CMD or 'r' add it to the list (we're waiting for both).
                 if (e.keyCode == 91 || e.keyCode == 82 || e.keyCode == 17) keysDown.push(e.keyCode);        
 
-                var takeover = false;
+                var takeover = false; // shall we step in?
+
                 // if two keys are being pressed.
                 if (keysDown.length == 2)
                 {
                     if (keysDown.indexOf(91) > -1 && keysDown.indexOf(82) > -1) takeover = true; // Mac - CMD + r
                     else if (keysDown.indexOf(17) > -1 && keysDown.indexOf(82) > -1) takeover = true; // Win - CTRL + r
                 }
-                else
-                    if (e.keyCode == 116) takeover = true; // Both - F5
-
+                else {
+                    if (e.keyCode == 116) takeover = true; // F5
+                }
+                    
                 if (takeover) // if we're going to do this thing.
                 {
-                    e.preventDefault();
+                    e.preventDefault(); // stop normal functions.
                     // refresh iframe.
                     $( '#iframe' ).attr( 'src', function ( i, val ) { return val; });
                     keysDown = [];   
                 }
             });
 
-            // all keyups wipe clean the multiple keys array.
-            $(window).on('keyup',function(e)
+            // all keyup's wipe clean the multiple keys array.
+            $(window).on('keyup',function(e){keysDown=[];});
+
+            /*
+                Listening for changes in the URL.
+            */
+            // window.onpopstate = function(e)
+            $(window).on('popstate',function(e)            
             {
-                keysDown = [];
-            });
+                console.log('pop');
+                console.log(history);
+                console.log(document.location);
+                return;
 
-            var container = $('.wrapper').css({position:'relative'});
-            container.prepend('<a href="#" class="handle"></a>');
-            var cover = $('.cover');
-
-            var winw = $(window).width();
-            var z_idx, drg_h, drg_w, pos_y, pos_x;
-            var handle = $('.handle');
-
-            $(window).on('popstate',function()
-            {
                 if (history.state !== null) num  = history.state.number;
-                else num = location.hash.substr(1);
+                else num = document.location.hash.substr(1);
 
-                var url = location.search.substr(5);
-                if (url == '') url = 'http://morganesque.com/';
-                $('#iframe').attr('src',url);
-                $('.url input').val(url);
+                var url = document.location.search.substr(5);
+                if (url !== '') currentURL = url;
 
-                if (num == '') num = 240 + Math.floor(Math.random()*784);
+                $('#iframe').attr('src',currentURL);
+                $('.url input').val(currentURL);
 
-                container.width(num);
-                handle.css({left:num+'px'});
-                handle.text(num);
+                if (num !== '') currentWidth = num;
+
+                container.width(currentWidth);
+                handle.css({left:currentWidth+'px'});
+                handle.text(currentWidth);
             });
 
             handle.on('mousedown',function(e)
@@ -233,18 +250,21 @@
 
                     handle.text(answer);
                     container.width(answer);
+                    handle.css({top:Math.round(t,0)+'px',left:answer+'px'});
 
-                    handle.offset({
-                         top:Math.round(t,0)
-                        ,left:Math.round(l,0)
-                    });
+                    // handle.offset({
+                    //      top:Math.round(t,0)
+                    //     ,left:Math.round(l,0)
+                    // });
                 }
                 
             }).on("mouseup", function() // mouseup end it all...
             {
+                console.log('up');
                 cover.hide();
                 handle.removeClass('draggable').css('z-index', z_idx);
                 var num = container.width();
+                // document.location.href = '#'+num;                
                 history.pushState({number:num}, '', '#'+num);
             });
 
@@ -253,9 +273,11 @@
             */
             $('.url input').on('change',function(val)
             {
+                console.log('URL change');
                 var url = $(this).val();
                 $( '#iframe' ).attr('src',url);
-                history.pushState({number:num,url:url}, '', '?url='+url+'#'+container.width());
+                var num = container.width();
+                history.pushState({number:num,url:url}, '', '?url='+url+'#'+num);
             });
 
             /*
@@ -269,10 +291,11 @@
                     var mark = $('<div class="mark">'+num+'</div>').css({left:(num/2)});
                     $('.markers').append(mark);
                 };
-            }
+            }            
 
-            renderSnaps();
-
+            /*
+                If the markers string is changed ... check it! change it! and re-render that baby!
+            */
             $('.marks input').on('change',function()
             {
                 var tmp = $(this).val().split(',');
@@ -286,6 +309,21 @@
                 renderSnaps();
 
             }).val(snaps.join(','));
+
+            function init()
+            {
+                console.log('init');
+                renderSnaps();
+                // sort out the URL.
+                $('#iframe').attr('src',currentURL);
+                $('.url input').val(currentURL);
+                // sort out the width.
+                container.width(currentWidth);
+                handle.css({left:currentWidth+'px'});
+                handle.text(currentWidth);
+            }
+
+            init();
         });    
 
     </script>
