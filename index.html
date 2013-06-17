@@ -206,6 +206,8 @@
                 handle.text(currentWidth);
             });
 
+            handle.on('click',function(e){e.preventDefault();}); // ignore normal clicks.
+
             handle.on('mousedown',function(e)
             {
                 // cover the whole thing coz we're only after mousemove and mouseup events now!
