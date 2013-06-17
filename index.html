@@ -82,9 +82,18 @@
         .controls:hover {
             left:0;            
         }
-        .marks {top:38px;}
-        .marks {left:-214px;}
+        .marks {top:38px;left:-214px;}
         .marks input {width:200px;} 
+        .info {top:76px;left:-167px;}
+        .info a {
+            padding:8px;
+            background:white;
+            font-size:0.88em;
+            line-height:32px;
+            text-decoration:none;
+            color:blue;
+        }
+        .info a:hover {color:red;}
         label {
             font-size:0.88em;
             background:black;
@@ -118,7 +127,7 @@
             padding:0.25em;
         }
     </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function()
         {               
@@ -176,10 +185,10 @@
             // window.onpopstate = function(e)
             $(window).on('popstate',function(e)            
             {
-                console.log('pop');
-                console.log(history);
-                console.log(document.location);
-                return;
+                // console.log('pop');
+                // console.log(history);
+                // console.log(document.location);
+                // return;
 
                 if (history.state !== null) num  = history.state.number;
                 else num = document.location.hash.substr(1);
@@ -260,7 +269,7 @@
                 
             }).on("mouseup", function() // mouseup end it all...
             {
-                console.log('up');
+                // console.log('up');
                 cover.hide();
                 handle.removeClass('draggable').css('z-index', z_idx);
                 var num = container.width();
@@ -273,7 +282,7 @@
             */
             $('.url input').on('change',function(val)
             {
-                console.log('URL change');
+                // console.log('URL change');
                 var url = $(this).val();
                 $( '#iframe' ).attr('src',url);
                 var num = container.width();
@@ -312,7 +321,7 @@
 
             function init()
             {
-                console.log('init');
+                // console.log('init');
                 renderSnaps();
                 // sort out the URL.
                 $('#iframe').attr('src',currentURL);
@@ -334,4 +343,5 @@
     <div class="wrapper"><iframe id="iframe" src=""></iframe></div>
     <div class="url controls"><input type="text" value="" placeholder="http://"/><label>URL</label></div>
     <div class="marks controls"><input type="text" value=""/><label>marks</label></div>
+    <div class="info controls"><a href="https://github.com/morganesque/resphrame">github repo &amp; more info</a><label>info</label></div>
 </body>
