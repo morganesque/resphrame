@@ -86,7 +86,7 @@
         }
         .marks {top:38px;left:-214px;}
         .marks input {width:200px;} 
-        .info {top:76px;left:-165px;}
+        .info {top:76px;left:0px;}
         .book {position:absolute;bottom:0px;left:0px;padding:0.5em;font-size:0.88em;}
         .book p {font-size:0.88em; margin-bottom:0.25em;}
         .book a,
@@ -338,6 +338,13 @@
 
             }).val(snaps.join(','));
 
+            $('.bounce').on('click',function(e)
+            {
+                e.preventDefault();
+                // console.log(currentURL);
+                window.location.href = currentURL;
+            }); //.text('hoha!');
+
             /*
                 Make it so Number 1. Make it so.
             */
@@ -365,7 +372,7 @@
     <div class="wrapper"><iframe id="iframe" src=""></iframe></div>
     <div class="url controls"><input type="text" value="" placeholder="http://"/><label>URL</label></div>
     <div class="marks controls"><input type="text" value=""/><label>marks</label></div>
-    <div class="info controls"><a href="https://github.com/morganesque/resphrame">github repo &amp; more info</a><label>info</label></div>
+    <div class="info controls"><a href="#" class="bounce">bounce</a></div>
     <div class="book"><p>Here's a<br />bookmarlet!</p><a title="Open in Resphrame" href="javascript:(function(){(function(e,t){var url='http://morganesque.github.io/resphrame/?'+'url='+e.location.href;e.location.href=url;})(window)})();">↔ Resphrame</a></div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -375,5 +382,6 @@
       ga('create', 'UA-20506545-5', 'morganesque.github.io');
       ga('send', 'pageview');
     </script>
+    <a href="https://github.com/morganesque/resphrame"><img style="position: absolute; bottom: 0; right: 0; border: 0; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
 </body>
 </html>
