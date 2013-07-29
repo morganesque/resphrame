@@ -174,6 +174,7 @@
                     
                 if (takeover) // if we're going to do this thing.
                 {
+                    console.log('stopping keystrokes');
                     e.preventDefault(); // stop normal functions.
                     // refresh iframe.
                     $( '#iframe' ).attr( 'src', function ( i, val ) { return val; });
