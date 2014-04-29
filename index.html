@@ -191,9 +191,9 @@
             // window.onpopstate = function(e)
             $(window).on('popstate',function(e)            
             {
-                // console.log('pop');
-                // console.log(history);
-                // console.log(document.location);
+                console.log('pop');
+                console.log(history);
+                console.log(document.location);
                 // return;
 
                 if (history.state !== null) num  = history.state.number;
@@ -350,12 +350,17 @@
             */
             function init()
             {
+                console.log('init');        
                 // console.log('init');
                 renderSnaps();
                 // sort out the URL.
                 $('#iframe').attr('src',currentURL);
                 $('.url input').val(currentURL);
                 // sort out the width.
+
+                var num = document.location.hash.substr(1);
+                if (num !== '') currentWidth = num;
+
                 container.width(currentWidth);
                 handle.css({left:currentWidth+'px'});
                 handle.text(currentWidth);
